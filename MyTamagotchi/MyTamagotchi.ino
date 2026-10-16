@@ -11,7 +11,6 @@
 #include
 
 
-//ORGANIZE THIS BETTER
 /* pin definitions lcd*/
 #define TFT_CS   10
 #define TFT_DC    7
@@ -19,7 +18,6 @@
 /*sensor data*/
 int CS = A0;
 int Dirt = 0;
-
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
