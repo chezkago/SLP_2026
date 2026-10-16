@@ -1,10 +1,11 @@
 /*Main File of Program*/
+
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7789.h>
 #include <SPI.h>
 #include <avr/pgmspace.h>
 /*1. TO-DO: Animation Files
-  Include the 3 .h animation files
+  Include the 3 .h animation files (order doesn't matter)
 */
 #include
 #include
