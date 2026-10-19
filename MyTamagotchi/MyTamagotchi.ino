@@ -1,5 +1,5 @@
 /*
-  kkkkkkkkkkkkkkkMain file of Program
+  Main file of Program
 */
 
 //Libraries 
