@@ -10,9 +10,9 @@
 /*============================================================
   1. TO DO: Include the animation files (Order doesn't matter)
   ==========================================================*/
-#include "drySoilAnimation.h"
-#include "idealMoistureAnimation.h"
-#include "wetSoilAnimation.h"
+#include
+#include
+#include
 
 //Pin defintions
 #define TFT_CS   10
@@ -53,13 +53,13 @@ void setup() {
 void loop() {
   soilMoisture = analogRead(CS);
   Serial.print("Mositure: "); Serial.println(soilMoisture);
-  if (soilMoisture > 520){    // too dry (upper 30% of the range))
+  if (soilMoisture > 0){
     //drySoilAnimation.h
   }
-  else if (soilMoisture < 442){    // too wet (anything under the 30%)
+  else if (soilMoisture < 0){
     //wetSoilAnimation.h
   }
-  else{   // ideal moisture (between that range)
+  else{
     //idealMoistureAnimation.h
   }
 
@@ -67,3 +67,5 @@ void loop() {
 
 
 
+
+}
