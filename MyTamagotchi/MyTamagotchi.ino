@@ -32,7 +32,7 @@ Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
 
 /*========================================== 
-  Next Week: Create Imaging Scaling Function
+    2. TO DO: Create Imaging Scaling Function
   =========================================*/
 void drawScaledImageFullScreen(const uint16_t *sprite) {
   // For next week but can also start early
@@ -45,10 +45,11 @@ void setup() {
 }
 
 /*============================================
-  2. TO-DO: Animation Set Up
+  3. TO-DO: Animation Set Up
     In the conditional, change the zeroes to 
-    the correct value based on desired output
-    We will add the actual animations later on!
+    the correct value based on desired output.
+    Use drawScaledImageFullScreen to call 
+    animations
   =============================================*/
 void loop() {
   soilMoisture = analogRead(CS);
