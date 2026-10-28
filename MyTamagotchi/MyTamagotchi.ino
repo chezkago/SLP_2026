@@ -10,9 +10,9 @@
 /*============================================================
   1. TO DO: Include the animation files (Order doesn't matter)
   ==========================================================*/
-#include
-#include
-#include
+#include "drySoilAnimation.h"
+#include "idealMoistureAnimation.h"
+#include "wetSoilAnimation.h"
 
 //Pin defintions
 #define TFT_CS   10
