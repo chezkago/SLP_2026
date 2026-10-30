@@ -10,9 +10,9 @@
 /*============================================================
   1. TO DO: Include the animation files (Order doesn't matter)
   ==========================================================*/
-#include
-#include
-#include
+#include drySoilAnimation.h
+#include idealMoistureAnimation.h
+#include wetSoilAnimation.h
 
 //Pin defintions
 #define TFT_CS   10
@@ -35,7 +35,14 @@ Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
     2. TO DO: Create Imaging Scaling Function
   =========================================*/
 void drawScaledImageFullScreen(const uint16_t *sprite) {
-  // For next week but can also start early
+  for(int y = 0; y < 280; y++) {
+    for (int x = 0; x < 240; x++) {
+      int srcY = y * 37 / 280;        //Converts LCD pixel to image size
+      int srcX = x * 32 / 240;
+
+      uint16_t color = pgm_read_word(srcY * IMG_W + srcX);    //Gets color from pixel
+      tft.drawPixel(x, y, color)
+    }
 }
 
 void setup() {
