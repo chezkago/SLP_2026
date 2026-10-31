@@ -36,6 +36,16 @@ Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
   =========================================*/
 void drawScaledImageFullScreen(const uint16_t *sprite) {
   // For next week but can also start early
+  const int IMG_W = 32;
+  const int IMG_H = 37;
+  for (int y = 0; y < IMG_H; y++) {
+    for (int x = 0; x < IMG_W; x++) {
+      int srcY = (y * 37) / 280;      // match source image coordinates to display
+      int srcX = (x * 32) / 240;
+      int index = srcY * IMG_W + srcX;    // storing image pixels
+      uint16_t color = pgm_read_word(&sprite[index]);     // read color pixels
+      tft.drawPixel(x, y, color);     // draw pixel
+    }
 }
 
 void setup() {
@@ -54,10 +64,10 @@ void setup() {
 void loop() {
   soilMoisture = analogRead(CS);
   Serial.print("Mositure: "); Serial.println(soilMoisture);
-  if (soilMoisture > 0){
+  if (soilMoisture > 710){      // dry soil (> 710 at 0%): 710-(710-600)(0%)
     //drySoilAnimation.h
   }
-  else if (soilMoisture < 0){
+  else if (soilMoisture < 677){     //wet soil (< 600 at 30%): 710-(710-600)(30%)
     //wetSoilAnimation.h
   }
   else{
