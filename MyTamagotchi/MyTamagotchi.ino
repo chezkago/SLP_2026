@@ -72,6 +72,12 @@ void loop() {
   }
   else{
     //idealMoistureAnimation.h
+    drawScaledImageFullScreen(idealMoistureAnimation1);
+    drawScaledImageFullScreen(idealMoistureAnimation2);
+    drawScaledImageFullScreen(idealMoistureAnimation3);
+    drawScaledImageFullScreen(idealMoistureAnimation3);
+    drawScaledImageFullScreen(idealMoistureAnimation2);
+    drawScaledImageFullScreen(idealMoistureAnimation1);
   }
 
 }
