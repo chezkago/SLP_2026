@@ -65,7 +65,13 @@ void loop() {
   soilMoisture = analogRead(CS);
   Serial.print("Mositure: "); Serial.println(soilMoisture);
   if (soilMoisture > 710){      // dry soil (> 710 at 0%): 710-(710-600)(0%)
-    //drySoilAnimation.h
+    drawScalredImageFullScreen(drySoilAnimation1);
+    drawScalredImageFullScreen(drySoilAnimation2);
+    drawScalredImageFullScreen(drySoilAnimation3);
+    drawScalredImageFullScreen(drySoilAnimation3);
+    drawScalredImageFullScreen(drySoilAnimation2);
+    drawScalredImageFullScreen(drySoilAnimation1);
+
   }
   else if (soilMoisture < 677){     //wet soil (< 600 at 30%): 710-(710-600)(30%)
     //wetSoilAnimation.h
