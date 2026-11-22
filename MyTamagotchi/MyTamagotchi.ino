@@ -75,6 +75,12 @@ void loop() {
   }
   else if (soilMoisture < 677){     //wet soil (< 600 at 30%): 710-(710-600)(30%)
     //wetSoilAnimation.h
+    drawScaledImageFullScreen(wetSoilAnimation1);
+    drawScaledImageFullScreen(wetSoilAnimation2);
+    drawScaledImageFullScreen(wetSoilAnimation3);
+    drawScaledImageFullScreen(wetSoilAnimation3);
+    drawScaledImageFullScreen(wetSoilAnimation2);
+    drawScaledImageFullScreen(wetSoilAnimation1);
   }
   else{
     //idealMoistureAnimation.h
